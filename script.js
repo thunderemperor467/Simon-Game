@@ -1,14 +1,14 @@
 let gameseq=[];
 let userseq=[];
 
-let btns=["yellow","red","purple", "green"];
+let btns=["red","yellow","green","purple"];
 
 let started=false;
 let level=0;
 
 
 
-let h2=document.querySelector("h1");
+let h2=document.querySelector("h4");
 
 document.addEventListener("keypress", function(){
     if(started == false){
@@ -20,9 +20,9 @@ document.addEventListener("keypress", function(){
 });
 
 function gameflash(btn){
-    btn.classList.add("flash");
+    btn.classList.add("btnflash");
     setTimeout(function(){
-        btn.classList.remove("flash");
+        btn.classList.remove("btnflash");
     },250);
 }
 
