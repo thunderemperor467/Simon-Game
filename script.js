@@ -8,7 +8,7 @@ let level=0;
 
 
 
-let h2=document.querySelector("h2");
+let h2=document.querySelector("h1");
 
 document.addEventListener("keypress", function(){
     if(started == false){
@@ -39,7 +39,7 @@ function levelup(){
     level++;
     h2.innerText =`Level ${level}`;
 
-    let randidx =Math.floor(Math.random()*3);
+    let randidx =Math.floor(Math.random()*btns.length);
     let randcolor=btns[randidx];
     let randbtn=document.querySelector(`.${randcolor}`);
     
@@ -74,7 +74,7 @@ function btnpress(){
     let btn=this;
     userflash(btn);
 
-    usercolor= btn.getAtrribute("id");
+    let usercolor= btn.id;
     userseq.push(usercolor);
     checkans(userseq.length-1);
 }
