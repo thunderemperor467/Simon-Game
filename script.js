@@ -8,7 +8,7 @@ let level=0;
 
 
 
-let h2=document.querySelector("h2");
+let h2=document.querySelector("h4");
 
 document.addEventListener("keypress", function(){
     if(started == false){
@@ -74,7 +74,7 @@ function btnpress(){
     let btn=this;
     userflash(btn);
 
-    usercolor= btn.getAtrribute("id");
+    usercolor= btn.id;
     userseq.push(usercolor);
     checkans(userseq.length-1);
 }
