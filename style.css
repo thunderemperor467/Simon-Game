@@ -30,10 +30,10 @@
     background-color: #f99b45;
 }
 
-.btnflash{
+.btn.btnflash{
     background-color: white;
 }
 
-.userflash{
+.btn.userflash{
     background-color: green;
 }
