@@ -1,7 +1,7 @@
 let gameseq=[];
 let userseq=[];
 
-let btns=["yellow","red","purple", "green"];
+let btns=["red","yellow","green","purple"];
 
 let started=false;
 let level=0;
@@ -20,9 +20,9 @@ document.addEventListener("keypress", function(){
 });
 
 function gameflash(btn){
-    btn.classList.add("flash");
+    btn.classList.add("btnflash");
     setTimeout(function(){
-        btn.classList.remove("flash");
+        btn.classList.remove("btnflash");
     },250);
 }
 
@@ -39,7 +39,7 @@ function levelup(){
     level++;
     h2.innerText =`Level ${level}`;
 
-    let randidx =Math.floor(Math.random()*3);
+    let randidx =Math.floor(Math.random()*btns.length);
     let randcolor=btns[randidx];
     let randbtn=document.querySelector(`.${randcolor}`);
     
@@ -74,7 +74,7 @@ function btnpress(){
     let btn=this;
     userflash(btn);
 
-    usercolor= btn.id;
+    let usercolor= btn.id;
     userseq.push(usercolor);
     checkans(userseq.length-1);
 }
